@@ -30,7 +30,7 @@
     <nav class="hidden md:flex gap-6 text-sm text-slate-200">
       <a href="#about">Обо мне</a>
       <a href="#services">Услуги</a>
-      <a href="#portfolio">Портфолио</a>
+      <a href="#portfolio">Форма</a>
       <a href="#contacts">Контакты</a>
     </nav>
 
@@ -40,25 +40,60 @@
   <div id="mobileMenu" class="hidden flex-col text-center bg-black/90 backdrop-blur-xl">
     <a href="#about" class="py-3">Обо мне</a>
     <a href="#services" class="py-3">Услуги</a>
-    <a href="#portfolio" class="py-3">Портфолио</a>
+    <a href="#portfolio" class="py-3">Форма</a>
     <a href="#contacts" class="py-3">Контакты</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-
-<h1 class="text-5xl md:text-6xl font-bold mb-6">
-Привет 👋 Я веб-разработчик
-</h1>
-
 <p class="text-slate-300 max-w-xl mb-8">
-Делаю современные сайты и лендинги. Быстро, красиво и адаптивно.
+Создаю сайты, которые выглядят дорого и приводят клиентов. Лендинги, верстка и редизайн под ключ.
 </p>
 
-<a href="https://t.me/Moscow27" target="_blank" class="btn-main">
-Связаться со мной
+<!-- WHY ME -->
+<section class="py-20 px-6 scroll-anim">
+
+<h2 class="title text-center">Почему выбирают меня</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+<div class="card">
+<h3>⚡ Быстро</h3>
+<p>Делаю сайты в короткие сроки без потери качества</p>
+</div>
+
+<div class="card">
+<h3>🎯 Под задачи</h3>
+<p>Не шаблон — делаю под ваш бизнес и цели</p>
+</div>
+
+<div class="card">
+<h3>📱 Адаптивно</h3>
+<p>Сайт отлично выглядит на телефонах и ПК</p>
+</div>
+
+<div class="card">
+<h3>💎 Современный дизайн</h3>
+<p>Glass, минимализм, анимации — как у топ сайтов</p>
+</div>
+
+<div class="card">
+<h3>💬 Всегда на связи</h3>
+<p>Отвечаю быстро и держу в курсе проекта</p>
+</div>
+
+<div class="card">
+<h3>🚀 Результат</h3>
+<p>Сайт, который не просто красивый, а приносит заявки</p>
+</div>
+
+</div>
+
+<div class="text-center mt-10">
+<a href="#portfolio" class="btn-main">
+Оставить заявку
 </a>
+</div>
 
 </section>
 
@@ -122,18 +157,60 @@
 </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- FORM -->
 <section id="portfolio" class="py-20 px-6 scroll-anim">
 
-<h2 class="title text-center">Портфолио</h2>
+<h2 class="title text-center">Форма заявки</h2>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+<p class="text-center text-slate-300 mb-10">
+Заполните форму — я свяжусь с вами и предложу решение
+</p>
 
-<div class="card h-40">Проект 1</div>
-<div class="card h-40">Проект 2</div>
-<div class="card h-40">Проект 3</div>
+<div class="max-w-2xl mx-auto container-box">
+
+<form action="https://formspree.io/f/xaqpabpk" method="POST" class="space-y-4">
+
+<input type="text" name="name" placeholder="Ваше имя" required
+class="w-full p-3 rounded-xl bg-white/10 border border-white/20">
+
+<input type="email" name="email" placeholder="Email или Telegram" required
+class="w-full p-3 rounded-xl bg-white/10 border border-white/20">
+
+<select name="service" 
+class="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white appearance-none">
+  <option value="" disabled selected class="text-black">Что нужно?</option>
+  <option class="text-black">Лендинг</option>
+  <option class="text-black">Верстка</option>
+  <option class="text-black">Редизайн</option>
+</select>
+
+<select name="budget" 
+class="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white appearance-none">
+  <option value="" disabled selected class="text-black">Бюджет</option>
+  <option class="text-black">$20 - $50</option>
+  <option class="text-black">$50 - $100</option>
+  <option class="text-black">$100+</option>
+</select>
+
+<select name="complexity" 
+class="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white appearance-none">
+  <option value="" disabled selected class="text-black">Сложность проекта</option>
+  <option class="text-black">Простой</option>
+  <option class="text-black">Средний</option>
+  <option class="text-black">Сложный</option>
+</select>
+
+<textarea name="message" placeholder="Опишите, какой дизайн хотите (минимализм, как Apple, анимации и т.д.)"
+required class="w-full p-3 rounded-xl bg-white/10 border border-white/20 h-32"></textarea>
+
+<button class="btn-main w-full">
+Отправить заявку
+</button>
+
+</form>
 
 </div>
+
 </section>
 
 <!-- CONTACTS -->
@@ -170,6 +247,15 @@ const menu = document.getElementById("mobileMenu");
 btn.onclick = () => {
   menu.classList.toggle("hidden");
 };
+</script>
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=13975477659"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '13975477659');
 </script>
 
 </body>
