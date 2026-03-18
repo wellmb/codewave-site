@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CodeWave</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="text-white overflow-x-hidden">
+
+<!-- 🍏 ФОН -->
+<div class="parallax">
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+  <div class="glow glow3"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+    
+    <div class="font-bold text-lg">CodeWave</div>
+
+    <nav class="hidden md:flex gap-6 text-sm text-slate-200">
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden flex-col text-center bg-black/90 backdrop-blur-xl">
+    <a href="#about" class="py-3">Обо мне</a>
+    <a href="#services" class="py-3">Услуги</a>
+    <a href="#portfolio" class="py-3">Портфолио</a>
+    <a href="#contacts" class="py-3">Контакты</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+<h1 class="text-5xl md:text-6xl font-bold mb-6">
+Привет 👋 Я веб-разработчик
+</h1>
+
+<p class="text-slate-300 max-w-xl mb-8">
+Делаю современные сайты и лендинги. Быстро, красиво и адаптивно.
+</p>
+
+<a href="https://t.me/Moscow27" target="_blank" class="btn-main">
+Связаться со мной
+</a>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 scroll-anim">
+<div class="container-box">
+
+<h2 class="title">Обо мне</h2>
+
+<p class="text-slate-200">
+Создаю современные сайты с упором на дизайн, скорость и удобство.
+</p>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 px-6 scroll-anim">
+
+<h2 class="title text-center">Услуги</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+<div class="card">
+<h3>Лендинги</h3>
+<p>Современные продающие страницы</p>
+</div>
+
+<div class="card">
+<h3>Верстка</h3>
+<p>HTML / Tailwind адаптивно</p>
+</div>
+
+<div class="card">
+<h3>Редизайн</h3>
+<p>Обновление и улучшение UX</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRICES -->
+<section class="py-20 px-6 scroll-anim">
+
+<h2 class="title text-center">Цены</h2>
+
+<div class="container-box text-center">
+
+<p class="mb-4">
+Каждый проект индивидуален, цена зависит от задачи
+</p>
+
+<p class="text-xl font-semibold mb-6">
+💬 Цена договорная
+</p>
+
+<a href="https://t.me/Moscow27" target="_blank" class="btn-main">
+Обсудить проект
+</a>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-20 px-6 scroll-anim">
+
+<h2 class="title text-center">Портфолио</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+<div class="card h-40">Проект 1</div>
+<div class="card h-40">Проект 2</div>
+<div class="card h-40">Проект 3</div>
+
+</div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts" class="py-20 px-6 text-center scroll-anim">
+
+<h2 class="title">Контакты</h2>
+
+<p class="mb-6 text-slate-300">
+Напишите мне — отвечу быстро
+</p>
+
+<a href="https://t.me/Moscow27" target="_blank" class="btn-main">
+Написать в Telegram
+</a>
+
+</section>
+
+<script>
+// scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".scroll-anim").forEach(el => observer.observe(el));
+
+// mobile menu
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
+
+btn.onclick = () => {
+  menu.classList.toggle("hidden");
+};
+</script>
+
+</body>
+</html>

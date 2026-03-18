@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🍏 Apple фон */
+.parallax {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 30%, #1e3a8a, transparent 40%),
+              radial-gradient(circle at 80% 70%, #7c3aed, transparent 40%),
+              radial-gradient(circle at 50% 50%, #020617, #000);
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+/* glow */
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.5;
+  animation: float 25s infinite alternate ease-in-out;
+}
+
+.glow1 {
+  background: #3b82f6;
+  top: -10%;
+  left: -10%;
+}
+
+.glow2 {
+  background: #a855f7;
+  bottom: -10%;
+  right: -10%;
+  animation-delay: 5s;
+}
+
+.glow3 {
+  background: #6366f1;
+  top: 40%;
+  left: 50%;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+  100% {
+    transform: translate(120px, -80px) scale(1.3);
+  }
+}
+
+/* карточки */
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* контейнер */
+.container-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* кнопка */
+.btn-main {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  transform: scale(1.1);
+}
+
+/* заголовки */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* анимация */
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.scroll-anim.show {
+  opacity: 1;
+  transform: translateY(0);
+}
