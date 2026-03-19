@@ -25,8 +25,13 @@
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
   <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
     
-    <div class="font-bold text-lg">CodeWave</div>
+    <!-- ЛОГО -->
+    <div class="flex items-center gap-2">
+      <img src="/android-chrome-512x512_228version.png" alt="CodeWave" class="w-8 h-8 object-contain">
+      <span class="font-bold text-lg">CodeWave</span>
+    </div>
 
+    <!-- desktop -->
     <nav class="hidden md:flex gap-6 text-sm text-slate-200">
       <a href="#about">Обо мне</a>
       <a href="#services">Услуги</a>
@@ -34,9 +39,11 @@
       <a href="#contacts">Контакты</a>
     </nav>
 
+    <!-- mobile -->
     <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
   </div>
 
+  <!-- mobile menu -->
   <div id="mobileMenu" class="hidden flex-col text-center bg-black/90 backdrop-blur-xl">
     <a href="#about" class="py-3">Обо мне</a>
     <a href="#services" class="py-3">Услуги</a>
@@ -250,7 +257,8 @@ btn.onclick = () => {
 </script>
 
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=13975477659"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=13975477659"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -258,5 +266,13 @@ gtag('js', new Date());
 gtag('config', '13975477659');
 </script>
 
+<body>
+        <!-- favicon -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
 </body>
-</html>
+</html> 
