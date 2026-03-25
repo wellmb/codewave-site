@@ -175,10 +175,18 @@ html {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  object-position: top; /* <--- Добавили это */
   border-radius: 16px;
   border: 1px solid var(--border-soft);
   background: rgba(255, 255, 255, 0.06);
+  transition: object-position 2s ease-in-out; /* <--- И это */
 }
+
+/* И добавь этот новый блок сразу под ним */
+.project-card:hover .project-image {
+  object-position: bottom;
+}
+
 
 .tech-list {
   display: flex;
