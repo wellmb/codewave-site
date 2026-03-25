@@ -10,6 +10,21 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=13975477659"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '13975477659');
+</script>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
 </head>
 
 <body class="text-white overflow-x-hidden">
@@ -39,7 +54,8 @@
     <nav class="hidden md:flex gap-6 text-sm text-slate-200">
       <a href="#about">Обо мне</a>
       <a href="#services">Услуги</a>
-      <a href="#portfolio">Форма</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#forma">Форма</a>
       <a href="#contacts">Контакты</a>
     </nav>
 
@@ -51,7 +67,8 @@
   <div id="mobileMenu" class="hidden flex-col text-center bg-black/90 backdrop-blur-xl">
     <a href="#about" class="py-3">Обо мне</a>
     <a href="#services" class="py-3">Услуги</a>
-    <a href="#portfolio" class="py-3">Форма</a>
+    <a href="#portfolio" class="py-3">Портфолио</a>
+    <a href="#forma" class="py-3">Форма</a>
     <a href="#contacts" class="py-3">Контакты</a>
   </div>
 </header>
@@ -106,7 +123,7 @@
 Первым клиентам — скидка и быстрый старт
 </p>
 
-<a href="#portfolio" class="btn-main">
+<a href="#forma" class="btn-main">
 Получить сайт
 </a>
 
@@ -156,7 +173,7 @@
 </div>
 
 <div class="text-center mt-10">
-<a href="#portfolio" class="btn-main">
+<a href="#forma" class="btn-main">
 Оставить заявку
 </a>
 </div>
@@ -174,6 +191,111 @@
 </p>
 
 </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-20 px-6 scroll-anim">
+  <div class="container-box">
+    <h2 class="title text-center">Мои Проекты</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Project 1 -->
+      <article class="card project-card">
+        <img
+          class="project-image"
+          src="screencapture-wellmb-github-io-HRCourierService-2026-03-25-19_12_35.png"
+          alt="Превью проекта 1"
+        />
+
+        <h3 class="mt-2 text-xl font-semibold">Сервис HR-курьеров</h3>
+        <p class="text-slate-200 mt-2">
+          Функциональный лендинг для логистики: строгий интерфейс, высокая производительность и полная адаптивность. Акцент на удобной навигации и конверсии.
+        </p>
+
+        <div class="tech-list mt-4">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">UX</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+
+        <a
+          href="https://wellmb.github.io/HRCourierService/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-btn btn-main mt-5"
+        >
+          Смотреть на GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card project-card">
+        <img
+          class="project-image"
+          src="screencapture-wellmb-github-io-mr-white-2026-03-25-19_12_58.png"
+          alt="Превью проекта 2"
+        />
+
+        <h3 class="mt-2 text-xl font-semibold">Mr. White - Шаблон</h3>
+        <p class="text-slate-200 mt-2">
+          Премиальный лендинг для автостудий: эстетичный темный интерфейс, плавная работа и адаптивность. Акцент на статусной подаче бренда и записи клиентов.
+        </p>
+
+        <div class="tech-list mt-4">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">Tailwind</span>
+          <span class="tech-badge">CX</span>
+        </div>
+
+        <a
+          href="https://wellmb.github.io/mr.white/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-btn btn-main mt-5"
+        >
+          Смотреть на GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card project-card">
+        <img
+          class="project-image"
+          src="screencapture-wellmb-github-io-codewave-site-2026-03-25-19_13_10.png"
+          alt="Превью проекта 3"
+        />
+
+        <h3 class="mt-2 text-xl font-semibold">CodeWave - Портфолио</h3>
+        <p class="text-slate-200 mt-2">
+          Технологичная витрина для IT-проектов: футуристичный дизайн, интерактивные элементы и высокая скорость. Акцент на презентации навыков и UX-решений.
+        </p>
+
+        <div class="tech-list mt-4">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">Tailwind</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+
+        <a
+          href="https://wellmb.github.io/codewave-site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-btn btn-main mt-5"
+        >
+          Смотреть на GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </article>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
@@ -224,7 +346,7 @@
 </section>
 
 <!-- FORM -->
-<section id="portfolio" class="py-20 px-6 scroll-anim">
+<section id="forma" class="py-20 px-6 scroll-anim">
 
 <h2 class="title text-center">Форма заявки</h2>
 
@@ -315,23 +437,5 @@ btn.onclick = () => {
 };
 </script>
 
-<head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=13975477659"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '13975477659');
-</script>
-
-<head>
-        <!-- favicon -->
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-
-</html> 
+</body>
+</html>
